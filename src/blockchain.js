@@ -10,11 +10,12 @@ class Block {
 	}
 
 	calculateHash() {
-		return CryptoJS.SHA256(	this.index.toString() + 
-								this.previousHash.toString() + 
-								this.timestamp.toString() + 
-								this.data.toString() 
-								).toString();
+		return CryptoJS.SHA256(	
+			this.index.toString() + 
+			this.previousHash.toString() + 
+			this.timestamp.toString() + 
+			this.data.toString()
+			).toString();
 	}
 
 	isStructureValid() {
